@@ -1,0 +1,20 @@
+---
+name: 'pr-tracker'
+description: 'keep track of merged PRs and collect them in an issue'
+inputs:
+  owner:
+    description: "owner, by default: the current repository's owner"
+  repository:
+    description: 'repository, default: the current repository'
+  component:
+    description: 'component, default: the current repository'
+  github-token:
+    description: 'github-token (needs write to the issues in the owner/repository)'
+outputs:
+  issue:
+    description: 'Number of the issue we updated'
+  issue_url:
+    description: 'URL of the issue we updated'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

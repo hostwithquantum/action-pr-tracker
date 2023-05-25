@@ -1,0 +1,5 @@
+action.yml
+package.json
+package-lock.json
+.github
+dist
